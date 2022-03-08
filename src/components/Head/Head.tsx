@@ -1,25 +1,50 @@
 import NextHead from 'next/head';
 
-export const Head = () => (
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  author?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  ogImage?: string;
+}
+
+export const Head = ({
+  title,
+  description,
+  keywords,
+  author,
+  ogTitle,
+  ogDescription,
+  ogUrl,
+  ogImage,
+}: Props) => (
   <NextHead>
-    <title>Ema Lorenzo</title>
-    <meta
-      name="description"
-      content="👋 Hi! I'm Ema, a Frontend Developer with infinite curiosity in the search for more beauty on the web."
-    />
-    <meta
-      name="keywords"
-      content="creative, developer, frontend, tech, art, react"
-    />
-    <meta name="author" content="Emanuel Lorenzo" />
-    <meta name="robots" content="follow, index" />
-    <meta property="og:title" content="Ema Lorenzo: Creative Developer" />
-    <meta
-      property="og:description"
-      content="👋 Hi! I'm Ema, a Frontend Developer with infinite curiosity in the search for more beauty on the web. Here I share about React, CSS, Three.js and more."
-    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://emalorenzo.com/" />
-    <meta property="og:image" content="https://emalorenzo.com/images/og.png" />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="robots" content="follow, index" />
   </NextHead>
 );
+
+Head.defaultProps = {
+  title: 'Next Starter',
+  description:
+    'A highly opinionated and complete starter for Next.js projects ready to production. Includes Typescript, Styled Components, Prettier, ESLint, Husky, SEO, and more.',
+  keywords:
+    'next, starter, typescript, styled components, prettier, eslint, husky, seo',
+  author: 'YOUR_NAME',
+  ogTitle: 'Next Starter ⚡️: Ready to production',
+  ogDescription:
+    'A highly opinionated and complete starter for Next.js projects ready to production. Includes Typescript, Styled Components, Prettier, ESLint, Husky, SEO, and more.',
+  ogUrl: 'https://next-starter-ebon.vercel.app/',
+  ogImage: 'https://next-starter-ebon.vercel.app/images/og.png',
+};
