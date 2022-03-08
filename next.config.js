@@ -10,4 +10,8 @@ module.exports = withBundleAnalyzer({
   experimental: {
     concurrentFeatures: true,
   },
+  compiler: {
+    styledComponents: true,
+    removeConsole: true,
+  },
 });
