@@ -1,8 +1,10 @@
-import React from 'react';
-import { NextPage } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import type { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
+
+import { MainLayout } from '@/layouts';
 
 const Wrapper = styled.main`
   height: 100%;
@@ -16,7 +18,11 @@ const Wrapper = styled.main`
   }
 `;
 
-const ErrorPage: NextPage = () => {
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+const ErrorPage: NextPageWithLayout = () => {
   return (
     <Wrapper>
       <Head>
@@ -29,6 +35,10 @@ const ErrorPage: NextPage = () => {
       </Link>
     </Wrapper>
   );
+};
+
+ErrorPage.getLayout = function getLayout(page) {
+  return <MainLayout>{page}</MainLayout>;
 };
 
 export default ErrorPage;

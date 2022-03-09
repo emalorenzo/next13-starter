@@ -4,16 +4,20 @@ import { COLORS } from '@/theme';
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --primary-color: hsl(${COLORS.primaryHue} 100% 50%);
+    --primary-color: hsl(${COLORS.primaryHue} 100% 80%);
     --background: hsl(${COLORS.backgroundHue} 0% 100%);
-    --text-color: hsl(${COLORS.backgroundHue} 0% 8%);
+    --foreground: hsl(${COLORS.backgroundHue} 0% 90%);
+    --text-color: hsl(${COLORS.textHue} 0% 8%);
+    --background-active: hsl(${COLORS.backgroundHue} 10% 80%);
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
       --primary-color: hsl(${COLORS.primaryHue} 100% 50%);
       --background: hsl(${COLORS.backgroundHue} 0% 8%);
+      --foreground: hsl(${COLORS.backgroundHue} 0% 0%);
       --text-color: hsl(${COLORS.backgroundHue} 0% 100%);
+      --background-active: hsl(${COLORS.backgroundHue} 10% 10%);
     }
   }
 
