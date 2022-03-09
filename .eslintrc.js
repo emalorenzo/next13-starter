@@ -1,20 +1,10 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
     es2020: true,
-  },
-  root: true,
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
+    node: true,
   },
   extends: [
-    // airbnb rules
     'airbnb',
     // eslint TypeScript rules (github.com/typescript-eslint/typescript-eslint)
     'plugin:@typescript-eslint/eslint-recommended',
@@ -24,7 +14,6 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    // accessibility plugin
     'plugin:jsx-a11y/recommended',
 
     // includes eslint-plugin-react / eslint-plugin-react-hooks / eslint-plugin-next
@@ -36,60 +25,74 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
   ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2020,
+    sourceType: 'module',
+  },
+  plugins: [
+    'import',
+    '@typescript-eslint',
+    'react',
+    'simple-import-sort',
+    'prettier',
+  ],
+  root: true,
   rules: {
-    // Next.js doesn't require react in scope
-    'react/react-in-jsx-scope': 'off',
-
-    // We will use href prop in Next.js's Link component instead of anchor tag
-    'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-        components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton'],
-      },
-    ],
-    'jsx-a11y/label-has-associated-control': 'off',
-    'jsx-a11y/accessible-emoji': 'off',
-    'react/no-unescaped-entities': 'off',
-
-    // We turn off prop-types rule, as we will use TypeScript's types instead.
-    'react/prop-types': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
-    'import/extensions': 'off',
-    'react/jsx-props-no-spreading': ['error', { custom: 'ignore' }],
-    'import/prefer-default-export': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'no-console': 'off',
-    'consistent-return': 'off',
-    'no-underscore-dangle': 'off',
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
     '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+    'consistent-return': 'off',
+    'import/extensions': 'off',
+    // We will use href prop in Next.js's Link component instead of anchor tag
     'import/order': [
       'warn',
       {
+        'newlines-between': 'always',
         pathGroups: [
           {
-            pattern: '@/**',
             group: 'external',
+            pattern: '@/**',
             position: 'after',
           },
         ],
-        'newlines-between': 'always',
       },
     ],
+    'import/prefer-default-export': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        aspects: ['invalidHref', 'preferButton'],
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+      },
+    ],
+    'jsx-a11y/label-has-associated-control': 'off',
+    'no-console': 'off',
+    'no-underscore-dangle': 'off',
+    'no-use-before-define': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
+    'react/jsx-props-no-spreading': ['error', { custom: 'ignore' }],
+    'react/no-unescaped-entities': 'off',
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'simple-import-sort/exports': 'error',
+    'simple-import-sort/imports': 'error',
+    'sort-keys': 'error',
   },
-  plugins: ['import', '@typescript-eslint', 'react', 'prettier'],
   settings: {
-    react: {
-      version: 'detect',
-    },
     // TypeScript needs this to resolve nextjs absolute imports
     'import/resolver': {
       typescript: {
         project: '.',
       },
+    },
+    react: {
+      version: 'detect',
     },
   },
 };
