@@ -104,12 +104,12 @@ import { Head } from '@/components'
 
 You can also pass props to customize the use case of different pages.
 
-## OG Image
+### OG Image
 There is an OG Image already, change it for a OG Image that suit your use case.
 
 It should be 1200x630px to fit most social media.
 
-## Indexing
+### Indexing
 
 `/public/robots.txt` file already provided allowing indexing.
 
