@@ -35,6 +35,14 @@ Absolute imports working with prefix `@/` starting from `src` folder.
 ```
 _tsconfig.json_
 
+### Sorting and grouping imports
+
+Imports will be grouped by dependencies, absolute imports (`@/*`) and relative imports.
+Also they will be sorted by insensitive ascending order.
+
+![](https://media.giphy.com/media/fuNPWZvyuRutgQ7f4z/giphy.gif)
+
+This is done using [`eslint-plugin-simple-import-sort`](https://github.com/lydell/eslint-plugin-simple-import-sort) and `sort-keys` from _.eslintrc.js_
 
 ### Validate staged files
 
@@ -55,7 +63,7 @@ _package.json_
 
 ### Styled Components
 
-One common feature when using Styled Components is to use [`babel-plugin-styled-components`](https://github.com/styled-components/babel-plugin-styled-components) for improved the readability of the generated classNames, and display the fileName in the className generated.
+One common feature when using Styled Components is to use [`babel-plugin-styled-components`](https://github.com/styled-components/babel-plugin-styled-components) to improve the readability of the generated classNames, and display the fileName in the className generated.
 
 This is done without using the plugin, by Vercel's team with the flag:
 
