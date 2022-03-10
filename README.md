@@ -4,7 +4,7 @@ The aim for this starter is to give you a starting point with everything ready t
 
 [![image](/public/images/og.png)](https://next-starter-ebon.vercel.app/)
 
-## ⬛ Stack
+## ⚡️ Stack
 
 
 - [`Next.js`](https://nextjs.org/)
