@@ -20,7 +20,7 @@ const HomePage: NextPageWithLayout = () => {
   return (
     <Wrapper>
       <Head />
-      <h1>Next Complete Starter ⚡</h1>
+      <h1>Next Starter ⚡</h1>
     </Wrapper>
   );
 };

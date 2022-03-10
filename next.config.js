@@ -6,12 +6,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-  reactStrictMode: true,
+  compiler: {
+    removeConsole: true,
+    styledComponents: true,
+  },
   experimental: {
     concurrentFeatures: true,
   },
-  compiler: {
-    styledComponents: true,
-    removeConsole: true,
-  },
+  reactStrictMode: true,
 });
