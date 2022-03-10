@@ -89,3 +89,31 @@ experimental: {
 reactStrictMode: true,
 ```
 _next.config.js_
+
+## SEO
+
+### Head Component
+
+The Head component has already some defaults, change them to fit your use case.
+
+Then import it and use it on the root of any page you need SEO.
+
+```jsx
+import { Head } from '@/components'
+```
+
+You can also pass props to customize the use case of different pages.
+
+## OG Image
+There is an OG Image already, change it for a OG Image that suit your use case.
+
+It should be 1200x630px to fit most social media.
+
+## Indexing
+
+`/public/robots.txt` file already provided allowing indexing.
+
+
+## Mantainers
+
+- [`Ema Lorenzo 🐦 @emalorenzo_`](https://twitter.com/emalorenzo_)
