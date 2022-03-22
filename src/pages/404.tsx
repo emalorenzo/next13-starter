@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import type { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
 
 import { MainLayout } from '@/layouts';
+import type { NextPageWithLayout } from '@/types';
 
 const Wrapper = styled.main`
   height: 100%;
@@ -17,10 +16,6 @@ const Wrapper = styled.main`
     color: var(--text-color);
   }
 `;
-
-type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
-};
 
 const ErrorPage: NextPageWithLayout = () => {
   return (
