@@ -82,7 +82,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': 'error',
-    'sort-keys': 'error',
+    'sort-keys': 'off',
   },
   settings: {
     // TypeScript needs this to resolve nextjs absolute imports
