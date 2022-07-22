@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { COLORS } from '@/theme';
+import { theme } from '@/styles';
 
 export const Wrapper = styled.div`
   height: 100%;
@@ -15,7 +15,7 @@ export const Content = styled.main`
 
 export const Footer = styled.footer`
   background-color: var(--foreground);
-  border-top: 1px solid hsl(${COLORS.backgroundHue} 10% 80%);
+  border-top: 1px solid ${theme.colors.brand.accent};
   color: var(--color);
   padding: 2rem;
   display: flex;
@@ -39,6 +39,6 @@ export const LinkButton = styled.a`
 
   &:focus,
   &:active {
-    outline: 1px solid hsl(${COLORS.backgroundHue} 10% 80%);
+    outline: 1px solid ${theme.colors.gray[200]};
   }
 `;
