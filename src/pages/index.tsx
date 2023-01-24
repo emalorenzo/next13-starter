@@ -12,12 +12,11 @@ const Wrapper = styled.main`
   height: 100%;
 
   @media ${theme.queries.smallTabletAndUp} {
-    background-color: ${theme.colors.brand.accent};
+    background-color: ${theme.colors.red[500]};
   }
 `;
 
 const HomePage: NextPageWithLayout = () => {
-  console.log('theme', theme);
   return (
     <Wrapper>
       <Head />

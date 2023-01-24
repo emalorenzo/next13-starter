@@ -22,7 +22,7 @@ export const ErrorLayout = ({ children }) => {
       <Wrapper>
         {children}
         <Link href="/" passHref>
-          <a>Go back to home</a>
+          Go back to home
         </Link>
       </Wrapper>
     </MainLayout>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { theme } from '@/styles';
@@ -14,15 +15,14 @@ export const Content = styled.main`
 `;
 
 export const Footer = styled.footer`
-  background-color: var(--foreground);
-  border-top: 1px solid ${theme.colors.brand.accent};
+  background-color: ${theme.colors.gray[200]};
   color: var(--color);
   padding: 2rem;
   display: flex;
   justify-content: flex-end;
 `;
 
-export const LinkButton = styled.a`
+export const LinkButton = styled(Link)`
   display: inline-block;
   display: flex;
   gap: 0.5em;

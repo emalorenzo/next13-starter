@@ -9,8 +9,5 @@ module.exports = withBundleAnalyzer({
   compiler: {
     styledComponents: true,
   },
-  experimental: {
-    concurrentFeatures: true,
-  },
   reactStrictMode: true,
 });
