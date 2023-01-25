@@ -1,3 +1,5 @@
+'use client';
+
 import { ErrorLayout } from '@/layouts';
 import type { NextPageWithLayout } from '@/types';
 

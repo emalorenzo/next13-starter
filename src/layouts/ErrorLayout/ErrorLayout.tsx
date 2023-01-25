@@ -1,8 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
-
-import { MainLayout } from '@/layouts';
 
 const Wrapper = styled.main`
   height: 100%;
@@ -18,13 +18,11 @@ const Wrapper = styled.main`
 
 export const ErrorLayout = ({ children }) => {
   return (
-    <MainLayout>
-      <Wrapper>
-        {children}
-        <Link href="/" passHref>
-          Go back to home
-        </Link>
-      </Wrapper>
-    </MainLayout>
+    <Wrapper>
+      {children}
+      <Link href="/" passHref>
+        Go back to home
+      </Link>
+    </Wrapper>
   );
 };
