@@ -6,8 +6,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-  compiler: {
-    styledComponents: true,
+  experimental: {
+    appDir: true,
   },
   reactStrictMode: true,
 });
