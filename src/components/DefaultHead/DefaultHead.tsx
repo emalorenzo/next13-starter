@@ -1,5 +1,3 @@
-import NextHead from 'next/head';
-
 interface Props {
   title?: string;
   description?: string;
@@ -11,7 +9,7 @@ interface Props {
   ogImage?: string;
 }
 
-export const Head = ({
+export const DefaultHead = ({
   title,
   description,
   keywords,
@@ -21,8 +19,14 @@ export const Head = ({
   ogUrl,
   ogImage,
 }: Props) => (
-  <NextHead>
+  <>
     <title>{title}</title>
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content={author} />
@@ -32,10 +36,10 @@ export const Head = ({
     <meta property="og:url" content={ogUrl} />
     <meta property="og:image" content={ogImage} />
     <meta name="robots" content="follow, index" />
-  </NextHead>
+  </>
 );
 
-Head.defaultProps = {
+DefaultHead.defaultProps = {
   author: 'YOUR_NAME',
   description:
     'A highly opinionated and complete starter for Next.js projects ready to production. Includes Typescript, Styled Components, Prettier, ESLint, Husky, SEO, and more.',

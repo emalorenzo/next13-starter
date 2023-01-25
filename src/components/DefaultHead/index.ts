@@ -1,0 +1,1 @@
+export { DefaultHead } from './DefaultHead';
