@@ -1,3 +1,5 @@
+'use client';
+
 import tailwindColors from 'tailwindcss/colors';
 
 import { theme as tailwindTheme } from '../../tailwind.config';

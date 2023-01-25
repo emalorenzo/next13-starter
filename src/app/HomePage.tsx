@@ -1,10 +1,8 @@
-import React from 'react';
+'use client';
+
 import styled from 'styled-components';
 
-import { Head } from '@/components';
-import { MainLayout } from '@/layouts';
 import { theme } from '@/styles';
-import type { NextPageWithLayout } from '@/types';
 
 const Wrapper = styled.main`
   display: grid;
@@ -16,17 +14,11 @@ const Wrapper = styled.main`
   }
 `;
 
-const HomePage: NextPageWithLayout = () => {
+export default function HomePage() {
   return (
     <Wrapper>
-      <Head />
+      {/* <Head /> */}
       <h1 className="bg-brand-main">Next Starter ⚡</h1>
     </Wrapper>
   );
-};
-
-HomePage.getLayout = function getLayout(page) {
-  return <MainLayout>{page}</MainLayout>;
-};
-
-export default HomePage;
+}
