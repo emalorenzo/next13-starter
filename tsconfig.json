@@ -21,14 +21,22 @@
     "baseUrl": ".",
     "incremental": true,
     "paths": {
-      "@/*": ["src/*"],
-    }
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "next.config.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
