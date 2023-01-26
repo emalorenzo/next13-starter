@@ -15,7 +15,7 @@ export const Content = styled.main`
 `;
 
 export const Footer = styled.footer`
-  background-color: ${theme.colors.gray[200]};
+  background-color: ${theme.colors.gray[900]};
   color: var(--color);
   padding: 2rem;
   display: flex;

@@ -1,6 +1,5 @@
 import '@/styles/globals.css';
 
-import { MainLayout } from '@/layouts';
 import StyledComponentsRegistry from '@/lib/registry';
 
 export default function RootLayout({
@@ -11,9 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>
-          <MainLayout>{children}</MainLayout>
-        </StyledComponentsRegistry>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );
