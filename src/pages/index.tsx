@@ -1,27 +1,18 @@
-import styled from 'styled-components';
-
 import { Head } from '@/components';
 import { MainLayout } from '@/layouts';
-import { theme } from '@/styles';
-
-const Wrapper = styled.div`
-  display: grid;
-  place-items: center;
-  height: 100%;
-
-  @media ${theme.queries.smallTabletAndUp} {
-    background-color: ${theme.colors.red[500]};
-  }
-`;
 
 export default function HomePage() {
   return (
     <>
       <Head />
       <MainLayout>
-        <Wrapper>
-          <h1 className="bg-brand-main">Next Starter ⚡</h1>
-        </Wrapper>
+        <section className="p-8 flex flex-col h-full justify-center">
+          <h1 className="text-3xl font-bold font-poppins">Next Starter ⚡</h1>
+          <p className="text-lg">
+            A highly opinionated and complete starter for Next.js projects ready
+            to production
+          </p>
+        </section>
       </MainLayout>
     </>
   );
