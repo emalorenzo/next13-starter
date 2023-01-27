@@ -1,2 +1,2 @@
-export { DefaultHead } from './DefaultHead';
+export { Head } from './Head';
 export { PreloadedFonts } from './PreloadFonts';

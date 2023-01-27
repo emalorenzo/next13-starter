@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { Head } from '@/components';
 import { MainLayout } from '@/layouts';
 import { theme } from '@/styles';
 
@@ -15,10 +16,13 @@ const Wrapper = styled.div`
 
 export default function HomePage() {
   return (
-    <MainLayout>
-      <Wrapper>
-        <h1 className="bg-brand-main">Next Starter ⚡</h1>
-      </Wrapper>
-    </MainLayout>
+    <>
+      <Head />
+      <MainLayout>
+        <Wrapper>
+          <h1 className="bg-brand-main">Next Starter ⚡</h1>
+        </Wrapper>
+      </MainLayout>
+    </>
   );
 }
