@@ -1,9 +1,5 @@
-import { DefaultHead } from '@/components';
+// import { DefaultHead } from '@/components';
 
 export default function Head() {
-  return (
-    <>
-      <DefaultHead />
-    </>
-  );
+  return <>{/* <DefaultHead /> */}</>;
 }
